@@ -1,21 +1,22 @@
 :root {
-  --cinza: #aaa;
+  --cinza: #F2A649;
   --vermelha: #e93d50;
-  --vermelha-escura: #af303f;
+  --laranja: #F24F13;
   --branca: #fff;
-  --luz: rgb(229, 255, 0);
-  --blue: #2E4CA6;
+  --luz: #F2B950;
+  --blue: #5397A6;
   --bluedark: #1F3473;
   --black: #0D0D0D;
 }
 
 body {
   align-items: center;
-  background: #23538a;
+  background-image: url('../images/teste.jpg');
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Gloock', serif;
+  font-family: 'Righteous', cursive;
   letter-spacing: 2px;
   min-height: 100vh;
 }
@@ -30,41 +31,41 @@ body {
   max-height: 100px;
 }
 h1 {
-  color: var(--branca);
+  color: var(--bluedark);
+  text-shadow: 2px 2px 2px var(--branca);
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .teclado {
-  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
-  border-radius: 20px;
+  border-radius: 10px;
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   padding: 10px;
 }
 
 .tecla {
-  background-color: lightblue;
-  border-radius: 20px;
+  background-color: #80BFB9;
+  border-radius: 50%;
   box-shadow: 3px 3px 0 var(--cinza);
-  color: var(--vermelha);
+  color: var(--bluedark);
   cursor: pointer;
   height: 120px;
   font-size: 1.75em;
   font-weight: bold;
   line-height: 120px;
   text-align: center;
+  text-shadow: 1px 1px 1px var(--branca);
   width: 120px;
 }
 
 .tecla.ativa,
 .tecla:active {
-  background-color: var(--vermelha);
-  border: 4px solid  var(--vermelha);
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
-  color: var(--branca);
+  background-color: var(--bluedark);
+  border: 3px solid  var(--luz);
+  color: var(--vermelha);
   outline: none;
 }
 
@@ -78,8 +79,4 @@ h1 {
 .tecla:active:focus {
   box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
 }
-@media(max-width:750px){
-  .teclado {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
